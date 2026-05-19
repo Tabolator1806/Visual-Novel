@@ -1,7 +1,13 @@
 [gd_scene format=3 uid="uid://bt7wu6wxh3w0d"]
 
 [ext_resource type="PackedScene" uid="uid://pgq7saabwarb" path="res://scenes/text_box.tscn" id="1_nt7q6"]
+[ext_resource type="Script" uid="uid://i72pn1ew2vrc" path="res://scripts/character_sprite.gd" id="2_gdt2y"]
 [ext_resource type="Resource" uid="uid://lj148a7pmk3n" path="res://assets/dialog1.tres" id="2_x4jx1"]
+[ext_resource type="PackedScene" uid="uid://ctetrtrv6u3uy" path="res://scenes/character_sprite.tscn" id="3_yev5y"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wm3ai"]
+resource_local_to_scene = true
+load_path = "res://.godot/imported/adam1.png-e3b5940d6126d2f3c0289c1d96abacc4.ctex"
 
 [node name="ui" type="Control" unique_id=1834055726]
 layout_mode = 3
@@ -10,6 +16,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Control" parent="." unique_id=1351409036 instance=ExtResource("3_yev5y")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48400003
+anchor_right = 0.48400003
+offset_left = -155.56805
+offset_right = 287.43195
+grow_horizontal = 2
+scale = Vector2(0.8, 0.8)
+texture = SubResource("CompressedTexture2D_wm3ai")
+stretch_mode = 2
+script = ExtResource("2_gdt2y")
 
 [node name="TextBox" parent="." unique_id=269435743 instance=ExtResource("1_nt7q6")]
 layout_mode = 1
