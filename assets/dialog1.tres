@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Text" format=3 uid="uid://lj148a7pmk3n"]
+
+[ext_resource type="Script" uid="uid://crcnpixkv6w75" path="res://scripts/text.gd" id="1_51fd4"]
+
+[resource]
+script = ExtResource("1_51fd4")
+character_name = "Jurek"
+character_text = "Okej"
+metadata/_custom_type_script = "uid://crcnpixkv6w75"

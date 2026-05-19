@@ -1,0 +1,14 @@
+[gd_resource type="JSON" format=3 uid="uid://b4dkyfdrm7xb0"]
+
+[resource]
+data = {
+"Chapters": {
+"One": [{
+"Character": "Adam",
+"Text": "Kocham Mężczyzn"
+}, {
+"Character": "Jurek",
+"Text": "Okej"
+}]
+}
+}

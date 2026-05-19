@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b87x12ixh185"]
+
+[ext_resource type="PackedScene" uid="uid://pgq7saabwarb" path="res://text_box.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://brm5dj8hk00qm" path="res://main.tscn" id="2_e2o6t"]
+
+[node name="Game" type="Node" unique_id=2123153696]
+
+[node name="TextBox" parent="." unique_id=1333747660 instance=ExtResource("1_80nbo")]
+
+[node name="Main" parent="." unique_id=685522741 instance=ExtResource("2_e2o6t")]
