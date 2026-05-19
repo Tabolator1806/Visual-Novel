@@ -11,23 +11,29 @@ offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_k7ve7")
-character_name_node = NodePath("TextBox/VSplitContainer/CharacterName")
-character_text_node = NodePath("TextBox/VSplitContainer/CharacterText")
+character_name_node = NodePath("Margin/VSplitContainer/CharacterName")
+character_text_node = NodePath("Margin/VSplitContainer/CharacterText")
+text_pace = 0.05
 
-[node name="TextBox" type="MarginContainer" parent="." unique_id=1796514977]
+[node name="Margin" type="MarginContainer" parent="." unique_id=1796514977]
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 200.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
 
-[node name="VSplitContainer" type="VSplitContainer" parent="TextBox" unique_id=2047894545]
+[node name="VSplitContainer" type="VSplitContainer" parent="Margin" unique_id=2047894545]
 layout_mode = 2
-size_flags_vertical = 0
 dragging_enabled = false
+dragger_visibility = 1
 
-[node name="CharacterName" type="Label" parent="TextBox/VSplitContainer" unique_id=1850837800]
+[node name="CharacterName" type="Label" parent="Margin/VSplitContainer" unique_id=1850837800]
 layout_mode = 2
 text = "Name"
 
-[node name="CharacterText" type="Label" parent="TextBox/VSplitContainer" unique_id=1586597067]
+[node name="CharacterText" type="Label" parent="Margin/VSplitContainer" unique_id=1586597067]
+custom_minimum_size = Vector2(500, 100)
 layout_mode = 2
+size_flags_vertical = 0
 text = "Text"
+autowrap_mode = 3
