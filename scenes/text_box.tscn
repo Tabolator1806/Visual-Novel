@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://pgq7saabwarb"]
+
+[ext_resource type="Script" uid="uid://cel0udwaosawn" path="res://scripts/text_box.gd" id="1_k7ve7"]
+
+[node name="TextBox" type="Panel" unique_id=269435743 node_paths=PackedStringArray("character_name_node", "character_text_node")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k7ve7")
+character_name_node = NodePath("TextBox/VSplitContainer/CharacterName")
+character_text_node = NodePath("TextBox/VSplitContainer/CharacterText")
+
+[node name="TextBox" type="MarginContainer" parent="." unique_id=1796514977]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 200.0
+
+[node name="VSplitContainer" type="VSplitContainer" parent="TextBox" unique_id=2047894545]
+layout_mode = 2
+size_flags_vertical = 0
+dragging_enabled = false
+
+[node name="CharacterName" type="Label" parent="TextBox/VSplitContainer" unique_id=1850837800]
+layout_mode = 2
+text = "Name"
+
+[node name="CharacterText" type="Label" parent="TextBox/VSplitContainer" unique_id=1586597067]
+layout_mode = 2
+text = "Text"

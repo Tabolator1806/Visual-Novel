@@ -1,4 +1,4 @@
-extends VSplitContainer
+extends Control
 
 
 @export var text:Resource

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bt7wu6wxh3w0d"]
+
+[ext_resource type="PackedScene" uid="uid://pgq7saabwarb" path="res://scenes/text_box.tscn" id="1_nt7q6"]
+[ext_resource type="Resource" uid="uid://lj148a7pmk3n" path="res://assets/dialog1.tres" id="2_x4jx1"]
+
+[node name="ui" type="Control" unique_id=1834055726]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextBox" parent="." unique_id=269435743 instance=ExtResource("1_nt7q6")]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+offset_top = -170.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_vertical = 0
+text = ExtResource("2_x4jx1")
