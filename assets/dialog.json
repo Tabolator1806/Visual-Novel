@@ -3,12 +3,28 @@
 		"One":[
 			{
 				"Character":"Adam",
-				"Text":"Kocham Mężczyzn"
+				"Text":"Kocham mężczyzn",
+				"Sprites":[
+					{
+						"File":"adam1.png",
+						"Animation":"jump"
+					}
+				]
 			},
 			{
 				"Character":"Jurek",
-				"Text":"Okej"
-			}
+				"Text":"Okej",
+				"Sprites":[
+					{
+						"File":"adam1.png",
+						"Animation":"jump"
+					},
+					{
+						"File":"adam_mlep.png"
+					}
+				]
+			},
+				
 		]
 	}
 }

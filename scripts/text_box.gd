@@ -1,36 +1,51 @@
 extends Control
 
 
-@export var text:Resource
 @export var character_name_node:Label
 @export var character_text_node:Label
 @export var text_pace:float
+var current_character = ""
+var current_text = ""
 var text_in_progress = false
 var skipped = false
+var sprites = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	showText(text.character_name,text.character_text)
+	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-func showText(name,text) -> void:
+func showText() -> void:
 	text_in_progress = true
-	var current_text = ""
-	character_name_node.set_text(name)
-	for letter in text:
+	var text = ""
+	character_name_node.set_text(current_character)
+	for letter in current_text:
 		await get_tree().create_timer(text_pace).timeout
 		if skipped:
 			break
-		current_text += letter
-		character_text_node.set_text(current_text)
+		text += letter
+		character_text_node.set_text(text)
 	text_in_progress = false
 	skipped = false
-func skip_text(text):
+func skip(text):
 	if text_in_progress:
 		skipped = true
 		character_text_node.set_text(text)
-func _input(event):
-	if event is InputEventMouseButton:
-		if event.button_index==1 and event.pressed:
-			skip_text(text.character_text)
-			
+	else:
+		showText()
+#func getText(chapter):
+	#var file = "res://assets/dialog.json"
+	#var json_as_text = FileAccess.get_file_as_string(file)
+	#var json_as_dict = JSON.parse_string(json_as_text)
+	#return json_as_dict["Chapters"][chapter]
+
+
+func _on_ui_skip_text() -> void:
+	skip(current_text)
+
+
+func _on_ui_next_text(newCharacter: String, newText: String, newSprites: Array) -> void:
+	current_character = newCharacter
+	current_text = newText
+	sprites = newSprites
+	showText()

@@ -1,9 +1,10 @@
 extends TextureRect
 
 
-var current_position = position.x
+var current_position: int
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	current_position = position.x
 	slide(20)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
