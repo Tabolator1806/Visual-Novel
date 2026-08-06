@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://ctetrtrv6u3uy"]
 
+[ext_resource type="Script" uid="uid://i72pn1ew2vrc" path="res://scripts/character_sprite.gd" id="1_k8qwi"]
+
 [node name="Character" type="TextureRect" unique_id=1351409036]
 offset_right = 443.0
 offset_bottom = 1241.0
+script = ExtResource("1_k8qwi")

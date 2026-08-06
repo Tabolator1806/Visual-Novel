@@ -3,13 +3,14 @@
 		"One":[
 			{
 				"Character":"Adam",
-				"Text":"Kocham mężczyzn",
+				"Text":"Kocham zsł",
 				"Sprites":[
 					{
 						"File":"adam1.png",
 						"Animation":"jump"
 					}
-				]
+				],
+				"Background":"szkola.png"
 			},
 			{
 				"Character":"Jurek",
@@ -17,12 +18,13 @@
 				"Sprites":[
 					{
 						"File":"adam1.png",
-						"Animation":"jump"
+						"Animation":"slide"
 					},
 					{
-						"File":"adam_mlep.png"
+						"File":"jurek1.png"
 					}
-				]
+				],
+				"Background":"szkolaszkic.png"
 			},
 				
 		]

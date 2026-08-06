@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://154ku0xuoplh" path="res://scripts/ui.gd" id="1_x4jx1"]
 [ext_resource type="Script" uid="uid://b4xemp3t76m4v" path="res://scripts/sprites.gd" id="2_yev5y"]
 
-[node name="ui" type="Control" unique_id=1834055726 node_paths=PackedStringArray("spritesContainer", "textBox")]
+[node name="ui" type="Control" unique_id=1834055726 node_paths=PackedStringArray("spritesContainer", "textBox", "backgroundRect")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,11 +14,17 @@ grow_vertical = 2
 script = ExtResource("1_x4jx1")
 spritesContainer = NodePath("Sprites")
 textBox = NodePath("TextBox")
+backgroundRect = NodePath("Background")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1413511760]
+layout_mode = 0
 
 [node name="Sprites" type="HBoxContainer" parent="." unique_id=630035860]
-layout_mode = 0
-offset_right = 1154.0
-offset_bottom = 1241.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
 alignment = 1
 script = ExtResource("2_yev5y")
 

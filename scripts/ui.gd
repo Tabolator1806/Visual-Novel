@@ -5,9 +5,11 @@ var current_text = ""
 var chapter = "One"
 var index = 0
 var sprites = []
+var background = ""
 var json = load("res://assets/dialog.json")
 @export var spritesContainer:HBoxContainer
 @export var textBox:Panel
+@export var backgroundRect:TextureRect
 var text_in_progress = false
 signal nextText(newCharacter:String, newText:String, newSprites:Array)
 signal skipText()
@@ -25,10 +27,13 @@ func getDataFromJSON(chapter):
 	current_character = real_json[index]["Character"]
 	current_text = real_json[index]["Text"]
 	sprites = real_json[index]["Sprites"]
+	if real_json[index].get("Background"):
+		background = load("res://assets/bg/" + real_json[index]["Background"])
 func next():
 	if not text_in_progress:
 		getDataFromJSON(chapter)
 		nextText.emit(current_character,current_text,sprites)
+		backgroundRect.texture = background
 		index+=1
 	else:
 		skipText.emit()
