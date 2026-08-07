@@ -17,7 +17,13 @@ textBox = NodePath("TextBox")
 backgroundRect = NodePath("Background")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1413511760]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 2
 
 [node name="Sprites" type="HBoxContainer" parent="." unique_id=630035860]
 layout_mode = 1

@@ -25,7 +25,5 @@ func showSprites(sprites):
 			"slide":
 				textureRect.slide(20)
 
-
-
 func _on_ui_next_text(newCharacter: String, newText: String, newSprites: Array) -> void:
 	showSprites(newSprites)
