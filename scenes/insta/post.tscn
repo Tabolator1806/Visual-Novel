@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://w4meg42i6y3"]
+
+[ext_resource type="Texture2D" uid="uid://bw4xxcf44xjo1" path="res://icon.svg" id="1_oo7vj"]
+
+[node name="Control" type="Control" unique_id=97274712]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=650166241]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UserData" type="HBoxContainer" parent="VBoxContainer" unique_id=1772558831]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/UserData" unique_id=1474858475]
+layout_mode = 2
+texture = ExtResource("1_oo7vj")
+
+[node name="Username" type="Label" parent="VBoxContainer/UserData" unique_id=353187171]
+layout_mode = 2
+text = "Godot"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=108197970]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer" unique_id=965310334]
+layout_mode = 2

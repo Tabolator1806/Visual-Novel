@@ -43,6 +43,14 @@ offset_right = 0.0
 offset_bottom = 0.0
 grow_vertical = 0
 
-[connection signal="nextText" from="." to="TextBox" method="_on_ui_next_text"]
+[node name="PauseButton" type="Button" parent="." unique_id=608769054]
+layout_mode = 0
+offset_left = 1092.0
+offset_top = 9.0
+offset_right = 1140.0
+offset_bottom = 55.0
+text = "="
+
 [connection signal="nextText" from="." to="Sprites" method="_on_ui_next_text"]
+[connection signal="nextText" from="." to="TextBox" method="_on_ui_next_text"]
 [connection signal="skipText" from="." to="TextBox" method="_on_ui_skip_text"]
