@@ -10,7 +10,7 @@
 						"Animation":"jump"
 					}
 				],
-				"Background":"szkola.png"
+				"Background":"lacznosc.png"
 			},
 			{
 				"Character":"Jurek",
@@ -23,6 +23,13 @@
 					{
 						"File":"jurek1.png"
 					}
+				],
+				"Background":"szkolaszkic.png"
+			},
+			{
+				"Character":"Jurek",
+				"Text":"Okej",
+				"Sprites":[
 				],
 				"Background":"szkolaszkic.png"
 			},

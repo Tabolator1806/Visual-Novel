@@ -39,13 +39,12 @@ func skip(text):
 	#var json_as_dict = JSON.parse_string(json_as_text)
 	#return json_as_dict["Chapters"][chapter]
 
-
-func _on_ui_skip_text() -> void:
-	skip(current_text)
-
-
-func _on_ui_next_text(newCharacter: String, newText: String, newSprites: Array) -> void:
+func _on_game_next_text(newCharacter: String, newText: String, newSprites: Array) -> void:
 	current_character = newCharacter
 	current_text = newText
 	sprites = newSprites
 	showText()
+
+
+func _on_game_skip_text() -> void:
+	skip(current_text)
